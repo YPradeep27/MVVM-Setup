@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:id="@+id/searchLayout"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:weightSum="7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_weight="3.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                    <ImageView
+
+                        android:id="@+id/menuIcon"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/menu_iconblue"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_25sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    android:layout_weight="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:gravity="center">
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="0.7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:id="@+id/imageIcon"
+                            android:background="@drawable/newlogo"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_weight="3.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+
+                    <RelativeLayout
+
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <ImageView
+
+                            android:layout_centerInParent="true"
+                            android:id="@+id/cartIcon"
+                            android:layout_marginRight="@dimen/_9sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/add_cart_icon72"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp" />
+
+                        <TextView
+
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginLeft="@dimen/_18sdp"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="7dp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/roboto_medium"
+                            android:id="@+id/cartSize"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:id="@+id/searchViewLayout"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_corner_rounded"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+
+                        android:weightSum="2"
+                        android:layout_weight="0.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+
+                            android:id="@+id/searchProductLayout"
+                            android:layout_weight="0.8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <EditText
+
+                                android:theme="@style/CustomEditTextTheme"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textColor="@color/blueTheme"
+                                android:inputType="text"
+                                android:filterTouchesWhenObscured="false"
+                                android:singleLine="true"
+                                android:imeOptions="actionDone"
+                                android:id="@+id/editTextSearch"
+                                android:gravity="center_vertical"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingLeft="2dp"
+                                android:textSize="@dimen/_12sdp"
+                                android:hint="Search Products"
+                                android:background="@null"
+                                android:layout_marginLeft="15dp"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:layout_marginBottom="5dp"
+                                android:textColorHint="#333e48"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:id="@+id/layoutSearchView"
+                            android:background="@color/blueTheme"
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="match_parent">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:orientation="horizontal"
+                            android:weightSum="5"
+                            android:visibility="gone"
+                            android:id="@+id/searchPostcodeLayout"
+                            android:layout_weight="1.2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+
+                                style="@style/CustomEditTextTheme"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:layout_weight="0.5"
+                                android:textColor="@color/blueTheme"
+                                android:filterTouchesWhenObscured="false"
+                                android:singleLine="true"
+                                android:imeOptions="actionDone"
+                                android:id="@+id/editTextSearchPostcode"
+                                android:gravity="center_vertical"
+                                android:fontFamily="@font/roboto_medium"
+                                android:paddingLeft="2dp"
+                                android:textSize="@dimen/_12sdp"
+                                android:hint="Type City or Search"
+                                android:background="@null"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <LinearLayout
+
+                                android:id="@+id/layoutPostDropHome"
+                                android:gravity="center"
+                                android:layout_weight="4.5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+
+                                    android:background="@drawable/dropmenu"
+                                    android:layout_gravity="center"
+                                    android:layout_width="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:background="@drawable/shape_right_rounded"
+                        android:id="@+id/searchBarLayout"
+                        android:layout_weight="3.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+
+                            android:id="@+id/searchIcon"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/search_icon_white"
+                            android:layout_marginBottom="10dp"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_17sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:visibility="gone"
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+
+            android:visibility="gone"
+            android:id="@+id/layoutBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager.widget.ViewPager
+
+                android:background="@color/white"
+                android:id="@+id/viewpagerBanner"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+
+                android:layout_height="@dimen/_150sdp">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+
+                android:id="@+id/bannerIndicator"
+                android:layout_alignBottom="@id/viewpagerBanner"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_18sdp"
+                app:dotsColor="@color/white"
+                app:selectedDotColor="@color/white"
+                app:dotsSize="@dimen/_7sdp"
+                app:dotsSpacing="@dimen/_3sdp"
+                app:dotsCornerRadius="@dimen/_5sdp"
+                app:dotsStrokeWidth="@dimen/_1sdp"
+                app:progressMode="true">
+
+            </com.tbuonomo.viewpagerdotsindicator.DotsIndicator>
+        </RelativeLayout>
+
+        <FrameLayout
+
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>
